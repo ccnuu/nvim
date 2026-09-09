@@ -2,7 +2,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 vim.opt.cursorline = true
-vim.opt.colorcolumn = "80"
+-- vim.opt.colorcolumn = "80"
 
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
@@ -12,3 +12,7 @@ vim.opt.autoread = true
 
 -- 是否显示nvim模式
 vim.opt.showmode = false
+
+-- 分屏
+vim.opt.splitbelow = true
+vim.opt.splitright = true
