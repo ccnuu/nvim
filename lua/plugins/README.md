@@ -11,6 +11,9 @@
 
 - tokyonight 主题
 - Bufferline 
+- nvim-autopairs 自动补全符号(括号，花括号...)
+- nvim-surround 自动补全符号（如选中某段字符串给它加上双引号）
+- hop.nvim 精确跳转
 
 ## Buffer / Window / Tab
 
@@ -32,3 +35,6 @@
     - tabnext 下一个 tab
     - tabclose 关闭当前 tab
 
+## hop
+
+命令：`HopWord`

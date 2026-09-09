@@ -1,0 +1,30 @@
+-- nvim-surround 命令
+-- ys 开头
+-- ysiw 修改其中一个词
+-- ysiw t 包裹一个 tab
+-- ys 2w 选中两词
+-- ys $ 当前位置到行尾
+
+-- 可视模式下，选中部分内容 shift-s
+
+-- ds / cs 删除/更改
+
+
+
+
+hello <p>world</p>
+hello world
+hello world
+"hello" "world
+<hello> "world
+hello world
+hello 'w'orld
+hello world
+hello world
+hello world
+hello world
+hello world
+hello world
+hello world
+hello world
+hello world
