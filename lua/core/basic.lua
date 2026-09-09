@@ -9,3 +9,6 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 0
 
 vim.opt.autoread = true
+
+-- 是否显示nvim模式
+vim.opt.showmode = false
