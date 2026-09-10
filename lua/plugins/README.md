@@ -15,6 +15,8 @@
 - nvim-surround 自动补全符号（如选中某段字符串给它加上双引号）
 - hop.nvim 精确跳转
 - Mason 安装语言服务（管理工具）
+    - mason-lspconfig
+    - nvim-lspconfig
 
 ## Buffer / Window / Tab
 
