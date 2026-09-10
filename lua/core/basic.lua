@@ -16,3 +16,4 @@ vim.opt.showmode = false
 -- 分屏
 vim.opt.splitbelow = true
 vim.opt.splitright = true
+

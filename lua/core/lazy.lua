@@ -14,4 +14,7 @@ require("lazy").setup({
     spec = {
         {import = "plugins"},
     },
+    change_detection = {
+        notify = false, -- 关闭保存配置时弹出提示
+    },
 })
