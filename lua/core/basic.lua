@@ -17,3 +17,6 @@ vim.opt.showmode = false
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+-- vim.opt.hlsearch = false

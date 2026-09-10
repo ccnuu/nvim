@@ -17,6 +17,7 @@
 - Mason 安装语言服务（管理工具）
     - mason-lspconfig
     - nvim-lspconfig
+- blink 代码补全
 
 ## Buffer / Window / Tab
 
