@@ -24,8 +24,7 @@ return {
                 if cmd_type == "/" then
                     return {"buffer"}
                 end
-                if cmd_type == ":" then 
-                    return {"cmdline"}
+                if cmd_type == ":" then return {"cmdline"}
                 end
                 return {}
             end,
