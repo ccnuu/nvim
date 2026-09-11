@@ -1,6 +1,3 @@
-local aaa = 10
-print(aaa)
-
 return {
 	"nvimdev/lspsaga.nvim",
 	cmd = "Lspsaga",
@@ -14,7 +11,8 @@ return {
 	keys = {
 		{ "<leader>lr", ":Lspsaga rename<CR>" }, -- 重命名
 		{ "<leader>lc", ":Lspsaga code_action<CR>" }, -- 代码提示
-		{ "<leader>ld", ":Lspsaga goto_definition<CR>" }, -- 跳转到定义/声明
+		{ "<leader>ld", vim.lsp.buf.definition }, -- 跳转到定义/声明
+		-- { "<leader>ld", ":Lspsaga goto_type_definition<CR>" }, -- 跳转到定义/声明
 		{ "<leader>lh", ":Lspsaga hover_doc<CR>" }, -- 显示帮助文档
 		{ "<leader>lR", ":Lspsaga finder<CR>" }, -- 寻找代码/代码的引用
 		{ "<leader>ln", ":Lspsaga diagnostic_jump_next<CR>" }, -- 跳转下一个警告

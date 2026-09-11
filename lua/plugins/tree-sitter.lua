@@ -8,6 +8,10 @@ return {
 			"vimdoc",
 			"vim",
 			"query",
+            "markdown",
+            "markdown_inline",
+            "c",
+            "cpp",
 		})
 	end,
 }
