@@ -31,6 +31,11 @@ return {
 
         -- lua lsp setup
         setup("lua-language-server", {
+            capabilities = {
+                textDocument = {
+                    completion = {dynamicRegistration = false}
+                },
+            },
             settings = {
                 Lua = {
                     diagnostics = {
