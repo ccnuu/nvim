@@ -26,24 +26,29 @@ return {
             -- setup lsp config
             local name = mason_lsp_mappings[lsp_name]
             vim.lsp.config(name, config)
+            config.capabilities = require("blink.cmp").get_lsp_capabilities()
             vim.lsp.enable(name)
         end
 
-        -- lua lsp setup
-        setup("lua-language-server", {
-            capabilities = {
-                textDocument = {
-                    completion = {dynamicRegistration = false}
+        local lsp_servers = {
+            ["lua-language-server"] = {
+                capabilities = {
+                    textDocument = {
+                        completion = {dynamicRegistration = false}
+                    },
                 },
-            },
-            settings = {
-                Lua = {
-                    diagnostics = {
-                        globals = {"vim"}
+                settings = {
+                    Lua = {
+                        diagnostics = {globals = {"vim"}}
                     }
                 }
-            }
-        })
+            },
+        }
+
+        for lsp_name, lsp_config in pairs(lsp_servers) do
+            setup(lsp_name, lsp_config)
+        end
+
         -- 管理诊断信息/错误提示外观等
         vim.diagnostic.config({
             underline = true,

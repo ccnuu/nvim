@@ -13,6 +13,19 @@ return {
         },
         keymap = {
             preset = "super-tab",
+            ["<Tab>"] = {
+                function (cmp)
+                    if cmp.snippet_active() then return cmp.accept() end
+                    if cmp.snippet_active({direction = 1}) then 
+                        if not pcall(vim.snippet.jump, 1) then
+                            pcall(vim.snippet.stop)
+                        end
+                        return true
+                    end
+                    return cmp.select_and_accept()
+                end,
+                "fallback",
+            },
         },
         sources = {
             default = {"path", "snippets", "buffer", "lsp"}

@@ -9,7 +9,7 @@ int main() {
 	std::cout << "hello world" << std::endl;
 	std::cout << "hello world" << std::endl;
 	std::cout << "hello world" << std::endl;
-	std::cout << "damn bro\n"; 
+	std::cout << "damn bro\n";
 
 	// hello world
 	// hello world
