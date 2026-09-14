@@ -20,3 +20,6 @@ vim.opt.splitright = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 -- vim.opt.hlsearch = false
+
+-- 粘贴板
+vim.opt.clipboard = "unnamedplus"

@@ -16,6 +16,9 @@ Neovim config
 - <num>f/F<字符> 跳转对应字符位置
 - t/T <字符> 跳转到对应字符位置前一个字符
 
+### 常用命令/参数
+- nvim --clean [文件]: 不使用配置打开nvim
+
 ### Neovim 配置文件的位置
 
 + Unix: `~/.config/nvim/init.lua`
