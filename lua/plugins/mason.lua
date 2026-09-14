@@ -1,7 +1,15 @@
 return {
 	"williamboman/mason.nvim",
 	event = "VeryLazy",
-	opts = {},
+	opts = {
+		ui = {
+			icons = {
+				package_installed = "✓",
+				package_pending = "➜",
+				package_uninstalled = "✗",
+			},
+		},
+	},
 	dependencies = {
 		"neovim/nvim-lspconfig",
 		"williamboman/mason-lspconfig",
@@ -25,13 +33,18 @@ return {
 
 			-- setup lsp config
 			local name = mason_lsp_mappings[lsp_name]
-			vim.lsp.config(name, config)
-			config.capabilities = require("blink.cmp").get_lsp_capabilities()
+			if not name then
+				vim.notify(("no lspconfig mapping for mason package %q"):format(lsp_name), vim.log.levels.WARN)
+				return
+			end
+
+			config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
 			config.on_attach = function(client)
 				-- 禁用 lsp服务器 端格式化和片段格式化
 				client.server_capabilities.documentFormattingProvider = false
 				client.server_capabilities.documentRangeFormattingProvider = false
 			end
+			vim.lsp.config(name, config)
 			vim.lsp.enable(name)
 		end
 
@@ -48,6 +61,7 @@ return {
 					},
 				},
 			},
+			["clangd"] = {},
 		}
 
 		for lsp_name, lsp_config in pairs(lsp_servers) do
