@@ -18,6 +18,7 @@
     - mason-lspconfig
     - nvim-lspconfig
 - blink 代码补全
+- nvim-tree 目录
 
 ## Buffer / Window / Tab
 

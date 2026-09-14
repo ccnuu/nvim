@@ -8,6 +8,7 @@ vim.keymap.set({ "n", "i" }, "<C-x>", "<ESC>dd<ESC>", { silent = true })
 
 -- 设置leader快捷键
 vim.g.mapleader = " "
+vim.g.maplocalleader = ","
 vim.keymap.set({ "n" }, "<leader>gg", "<Cmd>lua print(123)<CR>", { silent = true })
 
 -- 换行插入
